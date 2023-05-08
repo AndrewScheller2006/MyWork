@@ -1,0 +1,428 @@
+#first set of objects
+total = 0
+hello = 0
+hello2 = 0
+hello3 = 0
+hello4 = 0
+burgerloop = 0
+order = []
+order2 = []
+order3 = []
+order4 = []
+order5 = []
+deal = []
+orderprint2 = 0
+allofmenu = 0
+print("Welcome to the Krusty Krab, May I take your order?")
+while allofmenu != 1:
+######### burger ##########
+#checks user input and makes sure it is correct
+    while burgerloop != 1:
+        burger = input("Would you like a burger? (y or n)")
+        if burger == "y":
+            burgerloop +=1
+            deal.append(1)
+        if burger == "n":
+            burgerloop +=1
+        else:
+            burgerloop +=0
+#if the input was yes, it asks what type of burger you would like
+    if burger == "y":
+        while hello4 != 1:
+            yesburger = input("We have a Krabby patty(1.25), Double Krabby Patty(2.00), or a Tripple Krabby Patty(3.00), type (1, 2 or 3)")
+            if yesburger == "1":
+                hello4 += 1
+                total += 1.25
+                order.append("Krabby patty")
+                while hello != 1:
+                    seacheese = input("would you like sea cheese with that? (y or n)")
+                    if seacheese == "y":
+                        total += .25
+                        hello += 1
+                        order.append("Sea Cheese")
+                    if seacheese == "n":
+                        total += 0
+                        hello += 1
+                    else:
+                        hello += 0
+            if yesburger == "2":
+                hello4 += 1
+                total += 2.00
+                order.append("Double Krabby Patty")
+                while hello2 != 1:
+                    doublecheese = input("Would you like sea cheese with that? (y or n)")
+                    if doublecheese == "y":
+                        total += .25
+                        hello2 += 1
+                        order.append("Sea Cheese")
+                    if doublecheese == "n":
+                        total += 0 
+                        hello2 += 1
+                    else:
+                        total += 0
+                        hello2 +=0
+            if yesburger == "3":
+                hello4 += 1
+                total += 3.00
+                order.append("Tripple Krabby Patty")
+                while hello3 != 1:
+                    triplecheese = input("Would you like sea cheese with that? (y or n)")
+                    if triplecheese == "y":
+                        total += .25
+                        hello3 += 1
+                        order.append("Sea Cheese")
+                    if triplecheese == "n":
+                        total += 0
+                        hello3 += 1
+                    else:
+                        total += 0
+                        hello3 += 0
+
+        if burger == "n":
+            total+= 0
+            hello4 += 1
+            
+        
+    #######burger##########   
+#more objects for fries
+    friesloop = 0
+    friesloop2 = 0
+
+    #######kelp fries######
+    #loop here
+    while friesloop2 != 1:
+        fries = input("Would you like Coral Bits with that? (y or n")
+        if fries == "y":
+            friesloop2 +=1
+            deal.append(2)
+        if fries == "n":
+            friesloop2 +=1
+        else:
+            friesloop2 +=0
+#asking what size fries
+    if fries == "y":
+        while friesloop != 1:
+            size = input("What size would you like? (s,m,l)")
+            if size == "s":
+                total += 1.00
+                friesloop += 1
+            order.append("Small Coral Bits")
+            if size == "m":
+                total += 1.25
+                friesloop += 1
+                order.append("Medium Coral Bits")
+            if size == "l":
+                total += 1.50
+                friesloop += 1
+                order.append("Large Coral Bits")
+            else:
+                friesloop += 0
+    if fries == "n":
+        friesloop += 1
+        total += 0
+        
+    ########fries#########
+
+
+    #########kelp rings#########
+    #kelp ring varables
+    kelploop = 0
+    kelploop2 = 0
+    #looking for UI
+    while kelploop != 1:
+        kelp = input("Would you like any kelp rings? (y or n)")
+        if kelp == "y":
+            kelploop += 1
+        if kelp == "n":
+            kelploop += 1
+        else:
+            kelploop += 0
+    if kelp == "y":
+        total += 1.50
+        order.append("Kelp Rings")
+        while kelploop2 != 1:
+            salt = input("Would you like salty sauce with that? (y or n)")
+            if salt == "y":
+                kelploop2 += 1
+            if salt == "n":
+                kelploop2 += 1
+            else:
+                kelploop2 += 0
+        if salt == "y":
+            total += .50
+            order.append("Salty Sauce")
+        if salt == "n":
+            total += 0
+            
+    if kelp == "n":
+        total += 0
+    ########kelp rings##########
+
+
+    ########specials######
+    #specials objects
+    specialloop = 0
+    specialloop2 = 0
+    specialloop3 = 0
+    specialloop4 = 0
+    while specialloop2 != 1:
+        specials = input("Would you like to try one of our specials? (y or n)")
+        if specials == "y":
+            specialloop2 +=1
+        if specials == "n":
+            specialloop2 +=1
+        else:
+            specialloop +=0
+            
+            
+#this part checks to see if UI is acceptable or else code will repeat like the previous ones
+    if specials == "y":
+        while specialloop3 != 1:
+            yesspecial = input("We have a Karbby meal(3.50), Double Krabby Meal(3.75), Tripple Krabby Meal(4.00), Salty Sea Dog(1.25), Footlong(2.00), Sailors Suprise(3.00), or a Golden Loaf(2.00) Type 1, 2, 3, 4, 5, 6, or 7")
+            if yesspecial == "1":
+                specialloop3+=1
+            if yesspecial == "2":
+                specialloop3+=1
+            if yesspecial == "3":
+                specialloop3+=1
+            if yesspecial == "4":
+                specialloop3+=1
+            if yesspecial == "5":
+                specialloop3+=1
+            if yesspecial == "6":
+                specialloop3+=1
+            if yesspecial == "7":
+                specialloop3+=1
+            else:
+                specialloop3+=0
+        #This part adds the meal to list and price to total
+        if yesspecial == "1":
+            total+= 3.50
+            order.append("Krabby Meal")
+            specialloop +=1
+        if yesspecial == "2":
+            total+= 3.75
+            order.append("Double Krabby Meal")
+        if yesspecial == "3":
+            total+= 4.00
+            order.append("Tripple Krabby Meal")
+        if yesspecial == "4":
+            total+=1.25
+            order.append("Salty Sea Dog")
+        if yesspecial == "5":
+            total+=2.00
+            order.append("Footlong")
+        if yesspecial == "6":
+            total+=3.00
+            order.append("Sailors Suprise")
+        if yesspecial == "7":
+            total+=2.00
+            order.append("Golden Loaf")
+            while specialloop4 != 1:
+                sauce = input("Would you like some sauce with that? (y or n)")
+                if sauce == "y":
+                    total += .50
+                    specialloop4 +=1
+                    order.append("Sauce")
+                if sauce == "n":
+                    total += 0
+                    specialloop4 +=1
+                else:
+                    total += 0
+                    specialloop4 +=0
+
+    else:
+        specialloop +=0
+    if specials == "n":
+        specialloop +=1
+    else:
+        specialloop += 0
+    #######specials#########
+
+
+    #####shakes#########
+    #single shake object loop
+    shakeloop = 0
+    while shakeloop != 1:
+        shake = input("Would you like a kelp shake? (y or n)")
+        if shake == "y":
+            shakeloop += 1
+        if shake == "n":
+            shakeloop += 1
+        else:
+            shakeloop += 0
+        
+    if shake == "y":
+        total += 2.00
+        order.append("Kelp Shake")
+        
+    if shake == "n":
+        total += 0
+    ######shakes#########
+
+    ########soda##########
+    #loop objects
+    sodaloop = 0
+    sodasize = 0
+    while sodaloop != 1:
+        soda = input("Would you like a seafoam soda? (y or n")
+        if soda == "y":
+            sodaloop += 1
+            deal.append(3)
+        if soda == "n":
+            sodaloop += 1
+        else:
+            sodaloop += 0
+    if soda == "y":
+        while sodasize != 1:
+            sodaquestion = input("What size would you like? (s,m,l)")
+            if sodaquestion == "s":
+                sodasize += 1
+            if sodaquestion == "m":
+                sodasize += 1
+            if sodaquestion == "l":
+                sodasize += 1
+            else:
+                sodasize += 0
+        if sodaquestion == "s":
+            total += 1.00
+            order.append("Small Seafoam Soda")
+        if sodaquestion == "m":
+            total += 1.25
+            order.append("Medium Seafoam Soda")
+        if sodaquestion == "l":
+            total += 1.50
+            order.append("Large Seafoam Soda")
+    ########soda##########
+
+    #######checkout#######
+    #more loop varables
+    more = 0
+    extraloop = 0
+    againloop = 0
+    #discount
+    if 1 and 2 and 3 in deal:
+        total -= 1.50
+        
+    
+        
+#function for determining and printing total, automatically rounds answer and does tax
+    def check():
+        answer = (total *0.07)
+        answer2 = (answer + total)
+        print(" ")
+        print("Order 1")
+        print("Tax amount:")
+        print(round(answer,2))
+        print("Total:")
+        print(round(answer2,2))
+        [print(i) for i in order]
+        if 1 and 2 and 3 in deal:
+            print("Discount (-1.50)")
+    #using check function
+    check()
+#more loops :)
+    delagain = 0
+    editloop = 0
+    toot = 0
+    toot2 = 0
+    orderloop = 0
+#asking if you want to edit
+    while editloop != 1:
+        edit = input("Would you like to change your order? (y or n)")
+        if edit == "y":
+            editloop += 1
+        if edit == "n":
+            editloop += 1
+            allofmenu += 1     
+        else:
+            editloop += 0
+    #continues the ordering loop so you can add an item
+    if edit == "y":
+        while toot != 1:
+            addordel = input("Would you like to add or delete an item? (add or del)")
+            if addordel == "add":
+                toot += 1
+                hello = 0
+                hello2 = 0
+                hello3 = 0
+                hello4 = 0
+                burgerloop = 0
+            if addordel == "del":
+                toot += 1
+    #takes item out of list if user wants to delete an item from their order
+                while delagain != 1:
+                    print(order)
+                    remove = input("type the item you want to delete or type stop")
+                    order.remove(remove)
+                    if remove == "Krabby patty":
+                        total -= 1.25
+                    if remove == "Double Krabby Patty":
+                        total -= 2.00
+                    if remove == "Tripple Krabby Patty":
+                        total =- 3.00
+                    if remove == "Sea Cheese":
+                        total -= .25
+                    if remove == "Small Coral Bits":
+                        total -= 1.00
+                    if remove == "Medium Coral Bits":
+                        total -= 1.25
+                    if remove == "Large Coral Bits":
+                        total -= 1.50
+                    if remove == "Kelp Rings":
+                        total -= 1.50
+                    if remove == "Salty Sauce":
+                        total -= .50
+                    if remove == "Krabby Meal":
+                        total -= 2.50
+                    if remove == "Double Krabby Meal":
+                        total -= 3.75
+                    if remove == "Triple Krabby Meal":
+                        total -= 4.00
+                    if remove == "Salty Sea Dog":
+                        total -= 1.25
+                    if remove == "FootLong":
+                        total -= 2.00
+                    if remove == "Sailors Suprise":
+                        total -= 3.00
+                    if remove == "Golden Loaf":
+                        total -= 2.00
+                    if remove == "Sauce":
+                        total -= .50
+                    if remove == "Kelp Shake":
+                        total -= 2.00
+                    if remove == "Small Seafoam Soda":
+                        total -= 1.00
+                    if remove == "Medium Seafoam Soda":
+                        total -= 1.25
+                    if remove == "Large Seafoam Soda":
+                        total -= 1.50
+                        print(order)
+                    again = input("Remove something else? (y or n)")
+                    if again == "y":
+                        delagain += 0
+                    if again == "n":
+                        delagain += 1 
+                        while toot2 != 1:
+                            done = input("Would you like to add an item or finish? (add or fin)")
+                            if done == "add":
+                               toot2 += 1
+                            if done == "fin":
+                                toot2 += 1
+                            else:
+                                toot2 += 0
+                        if done == "add":
+                            hello = 0
+                            hello2 = 0
+                            hello3 = 0
+                            hello4 = 0
+                            burgerloop = 0
+                        if done == "fin":
+                            allofmenu += 1
+                            check()
+            else:
+                toot += 0
+#class that thanks customer for eating at the crusty crab
+class thanking:
+    print("Thanks for coming!")
+    print("Have a great day!")
